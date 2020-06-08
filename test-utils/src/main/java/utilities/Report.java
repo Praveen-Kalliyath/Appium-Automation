@@ -32,10 +32,11 @@ public class Report implements Data {
 	 */
 	public static void createReport() {
 		Log.info("Creating Execution Report");
-		Log.info("Creating Report In Location: " + REPORT_LOCATION);
+//		Log.info("Creating Report In Location: " + REPORT_LOCATION);
 //		File dir = new File(REPORT_LOCATION);
 //		if (!dir.exists())
 //			dir.mkdir();
+		Log.info("Creating Report In Location: " + System.getProperty("user.home") + "/Report.html");
 		ExtentHtmlReporter aventReporter = new ExtentHtmlReporter(System.getProperty("user.home") + "/Report.html");
 		extentReports = new ExtentReports();
 		extentReports.attachReporter(aventReporter);
@@ -80,7 +81,7 @@ public class Report implements Data {
 		if (extentReports != null) {
 			extentReports.flush();
 			Log.info("Flushed Report.");
-			Log.info("Saved Report In Location: " + REPORT_LOCATION);
+			Log.info("Saved Report In Location: " + System.getProperty("user.home") + "/Report.html");
 		}
 	}
 
