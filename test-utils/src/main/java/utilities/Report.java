@@ -33,10 +33,10 @@ public class Report implements Data {
 	public static void createReport() {
 		Log.info("Creating Execution Report");
 		Log.info("Creating Report In Location: " + REPORT_LOCATION);
-		File dir = new File(REPORT_LOCATION);
-		if (!dir.exists())
-			dir.mkdir();
-		ExtentHtmlReporter aventReporter = new ExtentHtmlReporter(REPORT_LOCATION);
+//		File dir = new File(REPORT_LOCATION);
+//		if (!dir.exists())
+//			dir.mkdir();
+		ExtentHtmlReporter aventReporter = new ExtentHtmlReporter(System.getProperty("user.home") + "/Report.html");
 		extentReports = new ExtentReports();
 		extentReports.attachReporter(aventReporter);
 

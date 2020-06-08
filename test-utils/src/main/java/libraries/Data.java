@@ -16,7 +16,7 @@ public interface Data {
 
 	public final String TEST_UTILS_RESOURCE_FOLDER_LOCATION = PARENT_FOLDER_PATH + "/test-utils/src/main/resources/";
 
-	public final String REPORT_LOCATION = PARENT_FOLDER_PATH + "/ebay-module/execution-result/Report.html";
+	public final String REPORT_LOCATION = System.getProperty("user.home") + "/Appium-Execution-Result/Report.html";					//PARENT_FOLDER_PATH + "/ebay-module/execution-result/Report.html";
 
 	public final String DATE_PATTERN = "MMM dd, yyyy";
 	
