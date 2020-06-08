@@ -967,8 +967,8 @@ public class DriverUtil implements Data {
 		int height = dim.getHeight();
 		int width = dim.getWidth();
 		int x = width / 2;
-		int top_y = (int) (height * 0.90);
-		int bottom_y = (int) (height * 0.40);
+		int top_y = (int) (height * 0.80);
+		int bottom_y = (int) (height * 0.20);
 		Log.info("Swiping Up to coordinates :" + x + "  " + top_y + " " + -bottom_y);
 		TouchAction<?> touchAction = new TouchAction<>(BaseUtil.getDriver());
 		touchAction.press(PointOption.point(x, top_y)).moveTo(PointOption.point(x, -bottom_y)).release().perform();
@@ -983,8 +983,8 @@ public class DriverUtil implements Data {
 		int height = dim.getHeight();
 		int width = dim.getWidth();
 		int x = width / 2;
-		int top_y = (int) (height * 0.90);
-		int bottom_y = (int) (height * 0.40);
+		int top_y = (int) (height * 0.80);
+		int bottom_y = (int) (height * 0.20);
 		Log.info("Swiping Up to coordinates :" + x + " " + top_y + " " + bottom_y);
 		TouchAction<?> touchAction = new TouchAction<>(BaseUtil.getDriver());
 		for (int i = 1; i <= swipeCount; i++) {

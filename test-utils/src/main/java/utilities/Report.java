@@ -2,7 +2,7 @@ package utilities;
 
 import java.io.IOException;
 import java.net.InetAddress;
-
+import java.io.File;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -33,6 +33,9 @@ public class Report implements Data {
 	public static void createReport() {
 		Log.info("Creating Execution Report");
 		Log.info("Creating Report In Location: " + REPORT_LOCATION);
+		File dir = new File(REPORT_LOCATION);
+		if (!dir.exists())
+			dir.mkdir();
 		ExtentHtmlReporter aventReporter = new ExtentHtmlReporter(REPORT_LOCATION);
 		extentReports = new ExtentReports();
 		extentReports.attachReporter(aventReporter);
@@ -362,7 +365,7 @@ public class Report implements Data {
 		}
 	}
 
-	public static boolean failurePresent(){
+	public static boolean failurePresent() {
 		return failurePresent;
 	}
 
