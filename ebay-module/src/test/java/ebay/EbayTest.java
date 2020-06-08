@@ -184,13 +184,13 @@ public class EbayTest extends BaseUtil implements Data {
 		try {
 			init();
 			validateEbayMobileAppHomeScreenTest();
-//			validateScreenOrientaionInHomeScreenTest();
-//			validateSwipeAndScrollGestureFunctionalityInHomeScreenTest();
-//			validateSignInToEbayMobileAppTest();
-//			validateSearchScreenTest();
-//			validateQuickSearchFunctionalityInEbayMobileAppTest();
-//			validateSearchForItemAndMatchDetailsFromResultWithItemDetailsInEbayMobileAppTest();
-//			addItemToCartAndValidateDetailsInCheckOutScreenTest();
+			validateScreenOrientaionInHomeScreenTest();
+			validateSwipeAndScrollGestureFunctionalityInHomeScreenTest();
+			validateSignInToEbayMobileAppTest();
+			validateSearchScreenTest();
+			validateQuickSearchFunctionalityInEbayMobileAppTest();
+			validateSearchForItemAndMatchDetailsFromResultWithItemDetailsInEbayMobileAppTest();
+			addItemToCartAndValidateDetailsInCheckOutScreenTest();
 		} catch (Exception e) {
 			Report.exception(e);
 			e.printStackTrace();
