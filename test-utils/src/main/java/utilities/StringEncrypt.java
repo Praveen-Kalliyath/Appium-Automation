@@ -3,15 +3,15 @@ package utilities;
 import java.util.Base64;
 
 public class StringEncrypt {
-	/*
+	/**
 	 * @author Praveen Kalliyath
 	 * 
 	 * @version 1.0
 	 * 
-	 * @since June 05 2020
+	 * @since June 30 2020
 	 */
 
-	/*
+	/**
 	 * Java Base64 method to encrypt string
 	 * 
 	 * @param message
@@ -22,7 +22,7 @@ public class StringEncrypt {
 		return new String(Base64.getEncoder().encode(message.getBytes()));
 	}
 
-	/*
+	/**
 	 * Java Base64 method to decode encrypted string
 	 * 
 	 * @param encrptyedMessage
@@ -33,7 +33,7 @@ public class StringEncrypt {
 		return new String(Base64.getDecoder().decode(encrptyedMessage.getBytes()));
 	}
 
-	/*
+	/**
 	 * Main method to test functionality
 	 */
 	public static void main(String args[]) {

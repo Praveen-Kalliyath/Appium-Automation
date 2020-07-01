@@ -14,25 +14,25 @@ import org.apache.commons.configuration.PropertiesConfigurationLayout;
 import libraries.Data;
 
 public class ProjectConfig implements Data {
-	/*
+	/**
 	 * @author Praveen Kalliyath
 	 * 
 	 * @version 1.0
 	 * 
-	 * @since June 05 2020
+	 * @since June 30 2020
 	 */
 
 	private static Properties properties;
 	private String appFilePath;
 
-	// /*
+	// /**
 	// * Constructor
 	// */
 	// public ProjectConfig() {
 	// loadConfig();
 	// }
 
-	/*
+	/**
 	 * Loading Properties Files for Framework & Application
 	 * 
 	 * @exception FileNotFoundException
@@ -76,7 +76,7 @@ public class ProjectConfig implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Loading Properties Files
 	 * 
 	 * @param filePath
@@ -103,7 +103,7 @@ public class ProjectConfig implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method to get application properties file path
 	 * 
 	 * @return appName
@@ -122,7 +122,7 @@ public class ProjectConfig implements Data {
 		return getAppFilePath();
 	}
 
-	/*
+	/**
 	 * Method to get application properties file path
 	 * 
 	 * @return appName
@@ -141,7 +141,7 @@ public class ProjectConfig implements Data {
 		return resourcePath;
 	}
 
-	/*
+	/**
 	 * Method to write 'Key' & 'Value' to Properties Files
 	 * 
 	 * @param key
@@ -176,7 +176,7 @@ public class ProjectConfig implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method to get property value
 	 * 
 	 * @param key
@@ -187,7 +187,7 @@ public class ProjectConfig implements Data {
 		return properties.getProperty(key);
 	}
 
-	/*
+	/**
 	 * Method to return application property file location
 	 * 
 	 * @return appFilePath
@@ -197,7 +197,7 @@ public class ProjectConfig implements Data {
 		return appFilePath;
 	}
 
-	/*
+	/**
 	 * Method to get application property file location
 	 * 
 	 * @param appFilePath

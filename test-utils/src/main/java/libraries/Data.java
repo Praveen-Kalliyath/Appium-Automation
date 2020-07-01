@@ -4,12 +4,12 @@ import java.nio.file.FileSystems;
 import java.nio.file.Path;
 
 public interface Data {
-	/*
+	/**
 	 * @author Praveen Kalliyath
 	 * 
 	 * @version 1.0
 	 * 
-	 * @since June 05 2020
+	 * @since June 30 2020
 	 */
 	public final Path PARENT_FOLDER_PATH = FileSystems.getDefault().getPath(".").toAbsolutePath().getParent()
 			.getParent();
@@ -26,7 +26,7 @@ public interface Data {
 	
 	public final long APP_LAUNCH_WAIT = 60;
 	
-	/*
+	/**
 	 * EBAY MODULE IDENTIFIERS
 	 */
 	public final String EBAY_RESOURCE_FOLDER_LOCATION = PARENT_FOLDER_PATH + "/ebay-module/src/test/resources/";

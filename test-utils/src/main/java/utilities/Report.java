@@ -15,19 +15,19 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import libraries.Data;
 
 public class Report implements Data {
-	/*
+	/**
 	 * @author Praveen Kalliyath
 	 * 
 	 * @version 1.0
 	 * 
-	 * @since June 05 2020
+	 * @since June 30 2020
 	 */
 	private static ExtentReports extentReports;
 	private static ExtentTest extentTest;
 	private static ExtentTest childNode;
 	private static boolean failurePresent = false;
 
-	/*
+	/**
 	 * Method To Create Extent Report
 	 */
 	public static void createReport() {
@@ -52,7 +52,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Create Extent Test
 	 * 
 	 * @return extentTest
@@ -63,7 +63,7 @@ public class Report implements Data {
 		return extentTest;
 	}
 
-	/*
+	/**
 	 * Method To Create Extent Test
 	 * 
 	 * @return childNode
@@ -74,7 +74,7 @@ public class Report implements Data {
 		return childNode;
 	}
 
-	/*
+	/**
 	 * Method To Flush & Save Extent Report
 	 */
 	public static void flushReport() {
@@ -85,7 +85,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Report To Parent Node
 	 * 
 	 * @param status
@@ -97,7 +97,7 @@ public class Report implements Data {
 		childNode = null;
 	}
 
-	/*
+	/**
 	 * Method To Log Link Details
 	 * 
 	 * @param linkName
@@ -113,7 +113,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Info
 	 * 
 	 * @param message
@@ -127,7 +127,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Pass
 	 * 
 	 * @param message
@@ -141,7 +141,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Pass With Screenshot
 	 * 
 	 * @param message
@@ -162,7 +162,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Fail
 	 * 
 	 * @param message
@@ -184,7 +184,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Warning
 	 * 
 	 * @param message
@@ -205,7 +205,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Error
 	 * 
 	 * @param message
@@ -231,7 +231,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Fatal
 	 * 
 	 * @param message
@@ -253,7 +253,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Exception
 	 * 
 	 * @param excepion
@@ -275,7 +275,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Skip
 	 * 
 	 * @param message
@@ -289,7 +289,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Debug
 	 * 
 	 * @param message
@@ -303,7 +303,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Using Status
 	 * 
 	 * @param message
@@ -317,7 +317,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Using Status
 	 * 
 	 * @param message
@@ -338,7 +338,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Log Label
 	 * 
 	 * @param message
@@ -353,7 +353,7 @@ public class Report implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method To Get Status
 	 * 
 	 * @return status

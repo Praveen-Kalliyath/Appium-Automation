@@ -5,18 +5,24 @@ import java.util.Random;
 import com.github.javafaker.Faker;
 
 public class DataFaker {
-
+	/**
+	 * @author Praveen Kalliyath
+	 * 
+	 * @version 1.0
+	 * 
+	 * @since June 30 2020
+	 */
 	private static Faker faker;
 
 	public DataFaker() {
 		faker = new Faker();
 	}
 
-	/*
+	/**
 	 * NAME
 	 */
 
-	/*
+	/**
 	 * Get Name Title
 	 * 
 	 * @return String: title
@@ -26,7 +32,7 @@ public class DataFaker {
 		return faker.name().title();
 	}
 
-	/*
+	/**
 	 * Get Full Name
 	 * 
 	 * @return String: name fullName
@@ -36,7 +42,7 @@ public class DataFaker {
 		return faker.name().fullName();
 	}
 
-	/*
+	/**
 	 * Get First Name
 	 * 
 	 * @return String: firstName
@@ -46,7 +52,7 @@ public class DataFaker {
 		return faker.name().firstName();
 	}
 
-	/*
+	/**
 	 * Get Last Name
 	 * 
 	 * @return String: lastName
@@ -56,7 +62,7 @@ public class DataFaker {
 		return faker.name().lastName();
 	}
 
-	/*
+	/**
 	 * Get Full Name With Middle
 	 * 
 	 * @return String: nameWithMiddle
@@ -66,11 +72,11 @@ public class DataFaker {
 		return faker.name().nameWithMiddle();
 	}
 
-	/*
+	/**
 	 * ADDRESS
 	 */
 
-	/*
+	/**
 	 * Get Full Address
 	 * 
 	 * @return String: fullAddress
@@ -80,7 +86,7 @@ public class DataFaker {
 		return faker.address().fullAddress();
 	}
 
-	/*
+	/**
 	 * Get Building Number
 	 * 
 	 * @return String: buildingNumber
@@ -90,7 +96,7 @@ public class DataFaker {
 		return faker.address().buildingNumber();
 	}
 
-	/*
+	/**
 	 * Get City
 	 * 
 	 * @return String: city
@@ -100,7 +106,7 @@ public class DataFaker {
 		return faker.address().city();
 	}
 
-	/*
+	/**
 	 * Get City
 	 * 
 	 * @return String: cityName
@@ -110,7 +116,7 @@ public class DataFaker {
 		return faker.address().cityName();
 	}
 
-	/*
+	/**
 	 * Get Country
 	 * 
 	 * @return String: country
@@ -120,7 +126,7 @@ public class DataFaker {
 		return faker.address().country();
 	}
 
-	/*
+	/**
 	 * Get Country Code
 	 * 
 	 * @return String: countryCode
@@ -130,7 +136,7 @@ public class DataFaker {
 		return faker.address().countryCode();
 	}
 
-	/*
+	/**
 	 * Get State
 	 * 
 	 * @return String: streetAddress
@@ -140,7 +146,7 @@ public class DataFaker {
 		return faker.address().state();
 	}
 
-	/*
+	/**
 	 * Get Street Address
 	 * 
 	 * @return String: streetAddress
@@ -150,7 +156,7 @@ public class DataFaker {
 		return faker.address().streetAddress();
 	}
 
-	/*
+	/**
 	 * Get Street Name
 	 * 
 	 * @return String: streetName
@@ -160,7 +166,7 @@ public class DataFaker {
 		return faker.address().streetName();
 	}
 
-	/*
+	/**
 	 * Get Zip Code
 	 * 
 	 * @return String: zipCode
@@ -170,7 +176,7 @@ public class DataFaker {
 		return faker.address().zipCode();
 	}
 
-	/*
+	/**
 	 * Get Time Zone
 	 * 
 	 * @return String: timeZone
@@ -180,7 +186,7 @@ public class DataFaker {
 		return faker.address().timeZone();
 	}
 
-	/*
+	/**
 	 * Get Latitude
 	 * 
 	 * @return String: latitude
@@ -190,7 +196,7 @@ public class DataFaker {
 		return faker.address().latitude();
 	}
 
-	/*
+	/**
 	 * Get Longitude
 	 * 
 	 * @return String: longitude
@@ -200,11 +206,11 @@ public class DataFaker {
 		return faker.address().longitude();
 	}
 
-	/*
+	/**
 	 * JOB
 	 */
 
-	/*
+	/**
 	 * Get Job Position
 	 * 
 	 * @return String: position
@@ -214,7 +220,7 @@ public class DataFaker {
 		return faker.job().position();
 	}
 
-	/*
+	/**
 	 * Get Job Title
 	 * 
 	 * @return String: title
@@ -224,11 +230,11 @@ public class DataFaker {
 		return faker.job().title();
 	}
 
-	/*
+	/**
 	 * CONTACT INFORMATION
 	 */
 
-	/*
+	/**
 	 * Get cellPhone
 	 * 
 	 * @return String: cellPhone
@@ -238,7 +244,7 @@ public class DataFaker {
 		return faker.phoneNumber().cellPhone().replaceAll("{^za-zA-Z0-9}+", "");
 	}
 
-	/*
+	/**
 	 * Get Phone Extension
 	 * 
 	 * @return String: extension
@@ -248,7 +254,7 @@ public class DataFaker {
 		return faker.phoneNumber().extension();
 	}
 
-	/*
+	/**
 	 * Get Email Address
 	 * 
 	 * @return String: safeEmailAddress
@@ -258,7 +264,7 @@ public class DataFaker {
 		return faker.internet().safeEmailAddress("noreply");
 	}
 
-	/*
+	/**
 	 * Get Paragraph
 	 * 
 	 * @param sentanceCount
@@ -270,7 +276,7 @@ public class DataFaker {
 		return faker.lorem().paragraph(sentanceCount);
 	}
 
-	/*
+	/**
 	 * Get Paragraph
 	 * 
 	 * @param wordCount
@@ -282,7 +288,7 @@ public class DataFaker {
 		return faker.lorem().sentence(wordCount);
 	}
 
-	/*
+	/**
 	 * Get Characters
 	 * 
 	 * @param charCount
@@ -294,11 +300,11 @@ public class DataFaker {
 		return faker.lorem().characters(charCount);
 	}
 
-	/*
+	/**
 	 * 
 	 */
 
-	/*
+	/**
 	 * Get Color
 	 * 
 	 * @return String: name
@@ -308,7 +314,7 @@ public class DataFaker {
 		return faker.color().name();
 	}
 
-	/*
+	/**
 	 * Get Random Item Name
 	 * 
 	 * @return String: itemName
@@ -346,7 +352,7 @@ public class DataFaker {
 		return value;
 	}
 
-	/*
+	/**
 	 * Java main method to test utility
 	 */
 	public static void main(String args[]) {

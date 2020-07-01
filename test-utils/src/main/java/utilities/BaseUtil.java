@@ -16,12 +16,12 @@ import io.appium.java_client.android.AndroidDriver;
 import libraries.Data;
 
 public class BaseUtil implements Data {
-	/*
+	/**
 	 * @author Praveen Kalliyath
 	 * 
 	 * @version 1.0
 	 * 
-	 * @since June 05 2020
+	 * @since June 30 2020
 	 */
 	private ProjectConfig config;
 	private DesiredCapabilities capabilities;
@@ -29,7 +29,7 @@ public class BaseUtil implements Data {
 
 	private static AndroidDriver<MobileElement> driver;
 
-	/*
+	/**
 	 * TestNG Before Suite Annotation
 	 */
 	@BeforeSuite
@@ -39,7 +39,7 @@ public class BaseUtil implements Data {
 		Report.createReport();
 	}
 
-	/*
+	/**
 	 * TestNG Before Method Annotation
 	 * 
 	 * @param: Methods
@@ -52,7 +52,7 @@ public class BaseUtil implements Data {
 		Report.createTest(method.getName());
 	}
 
-	/*
+	/**
 	 * TestNG After Method Annotation
 	 */
 	@AfterMethod
@@ -60,13 +60,17 @@ public class BaseUtil implements Data {
 		Report.createChildNode(new Object() {
 		}.getClass().getEnclosingMethod().getName());
 		if (CommonUtil.getSoftAssert() != null)
-			CommonUtil.assertAll();
+			try {
+				CommonUtil.assertAll();
+			} catch (AssertionError e) {
+				Log.error(e.getMessage());
+			}
 		if (testResult.getStatus() == ITestResult.FAILURE) {
 			Report.fail("Execution has failures. Please fix them");
 		}
 	}
 
-	/*
+	/**
 	 * TestNG After Suite Annotation
 	 */
 	@AfterSuite
@@ -75,14 +79,14 @@ public class BaseUtil implements Data {
 			Report.logWithScreenShot(Status.INFO, "Closing App Screenshot");
 		else
 			Report.log(Status.INFO, "Closing App Screenshot");
-		
+
 		Report.flushReport();
 		closeApp();
 
 		Log.info("Completed Execution");
 	}
 
-	/*
+	/**
 	 * Launch Appium Driver Method
 	 */
 	public void launchDriver() {
@@ -125,7 +129,7 @@ public class BaseUtil implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Desired Capability Method
 	 */
 	private void setCapabilities() {
@@ -151,7 +155,7 @@ public class BaseUtil implements Data {
 
 	}
 
-	/*
+	/**
 	 * Native Apps Capability Method
 	 */
 	private void setNativeAppCapabilities() {
@@ -179,14 +183,14 @@ public class BaseUtil implements Data {
 		capabilities.setCapability("app", getAppFilePath());
 	}
 
-	/*
+	/**
 	 * Web Apps Capability Method
 	 */
 	private void setWebAppCapabilities() {
 		Report.info("Setting Web Apps Capabilities");
 	}
 
-	/*
+	/**
 	 * Closing App
 	 */
 	private void closeApp() {
@@ -194,7 +198,7 @@ public class BaseUtil implements Data {
 		driver.closeApp();
 	}
 
-	/*
+	/**
 	 * Returning Andorid Driver
 	 * 
 	 * @return driver
@@ -204,7 +208,7 @@ public class BaseUtil implements Data {
 
 	}
 
-	/*
+	/**
 	 * Setting Application File Location
 	 */
 	public void applicationFileLocation(String appName) {
@@ -220,7 +224,7 @@ public class BaseUtil implements Data {
 
 	}
 
-	/*
+	/**
 	 * Getter method to retrieve application file location using instance
 	 * variable
 	 * 
@@ -231,7 +235,7 @@ public class BaseUtil implements Data {
 		return appFilePath;
 	}
 
-	/*
+	/**
 	 * Setter method to set application file location to instance variable
 	 * 
 	 * @param appFilePath
@@ -241,7 +245,7 @@ public class BaseUtil implements Data {
 		this.appFilePath = appFilePath;
 	}
 
-	/*
+	/**
 	 * Getter method to retrieve desired capabilities object using instance
 	 * variable
 	 * 

@@ -1,11 +1,13 @@
 ## Test-Util Module Description
 
 ### 001
-	Date : June 6th 2020
+	Date : June 30th 2020
 	Updated By: Praveen Kalliyath
 	Update each package, class & the methods details below
 	
 ### 002
+	Date : June 30th 2020
+	Updated By: Praveen Kalliyath
 	BaseUtil : TestNg Before Tests Methods & Driver Initialization
 	CommonUtil : Provides methods like sleep, compareValue, ConvertJsonToMap, Date Functions, etc
 	DataFaker : JavaFaker utility to generate random details

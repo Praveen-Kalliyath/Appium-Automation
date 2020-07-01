@@ -26,7 +26,7 @@ public class EbaySearchScreen {
 		excelUtil.loadExcelData("EBAY", "Record-001");
 	}
 
-	/*
+	/**
 	 * SEARCH SCREEN
 	 */
 	public void checkBasicElementsInRecentSearchScreen() {
@@ -98,8 +98,8 @@ public class EbaySearchScreen {
 	public void validateNavigatingBackToHomeScreenAndClearSearch() {
 		Report.info("Validating Navigation Back To Quick Search Screen From Result Screen");
 		CommonUtil.sleep(5);
-		DriverUtil.waitForElementToBeDisplayed(DriverUtil.element(ProjectConfig.getProperty("SAVE_SEARCH_TOOLTIP")));
-		DriverUtil.click(DriverUtil.element(ProjectConfig.getProperty("SAVE_SEARCH_TOOLTIP")));
+		DriverUtil.waitForElementToBeDisplayed(DriverUtil.element("SAVE_SEARCH_TOOLTIP"));
+		DriverUtil.click(DriverUtil.element("SAVE_SEARCH_TOOLTIP"));
 		CommonUtil.sleep(2);
 		ebayHomeScreen.navigateBackToHomeScreenFromUsingSideNavigationScreen();
 		Report.info("Validated Navigation Back To Home Screen From Result Screen");
@@ -111,8 +111,8 @@ public class EbaySearchScreen {
 		navigateToSearchScreenFromHomeScreen();
 		DriverUtil.setTextAndPressEnter(ebaySearchPage.edTxt_SearchAnything, excelUtil.getValueForKey("Search Item"));
 		CommonUtil.sleep(5);
-		DriverUtil.waitForElementToBeDisplayed(DriverUtil.element(ProjectConfig.getProperty("SAVE_SEARCH_TOOLTIP")));
-		DriverUtil.click(DriverUtil.element(ProjectConfig.getProperty("SAVE_SEARCH_TOOLTIP")));
+		DriverUtil.waitForElementToBeDisplayed(DriverUtil.element("SAVE_SEARCH_TOOLTIP"));
+		DriverUtil.click(DriverUtil.element("SAVE_SEARCH_TOOLTIP"));
 		CommonUtil.sleep(2);
 
 		setSearchDescriptionMap(getSearchResultToHashMap());
@@ -124,10 +124,10 @@ public class EbaySearchScreen {
 
 		// Getting Random Item From List Displayed
 		int index = CommonUtil.getRandomIndex(DriverUtil.getWebElementElementSize(ebaySearchPage.lst_SearchResults));
-//		 if (index == 0)
-//		 index = Integer.parseInt(
-//		 CommonUtil.getRandomNumberInRange(1,
-//		 DriverUtil.getElementSize(ebaySearchPage.lst_SearchResults)));
+		// if (index == 0)
+		// index = Integer.parseInt(
+		// CommonUtil.getRandomNumberInRange(1,
+		// DriverUtil.getElementSize(ebaySearchPage.lst_SearchResults)));
 
 		// Getting Search Result Text
 		List<MobileElement> listItem = DriverUtil.listElement("xpath",
@@ -217,6 +217,7 @@ public class EbaySearchScreen {
 		DriverUtil.checkElementIsDisplayed(ebaySearchPage.lbl_SearchForAnything);
 		Report.info("Validated Swipe Gesture Functionality In Search Screen");
 		navigateToHomeScreenFromSearchScreen();
+//		DriverUtil.pressBackKey();
 		CommonUtil.sleep(2);
 	}
 
@@ -242,7 +243,7 @@ public class EbaySearchScreen {
 
 	private void clickOnMenuSearchButton() {
 		DriverUtil.waitForElementToBeDisplayed(ebaySearchPage.btn_MenuSearch);
-		DriverUtil.click(DriverUtil.element(ProjectConfig.getProperty("MENU_SEARCH")));
+		DriverUtil.click(DriverUtil.element("MENU_SEARCH"));
 	}
 
 	public static HashMap<String, Object> getSearchDescriptionMap() {

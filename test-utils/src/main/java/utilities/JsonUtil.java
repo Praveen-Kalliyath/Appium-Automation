@@ -10,15 +10,15 @@ import java.io.File;
 import java.io.IOException;
 
 public class JsonUtil {
-	/*
+	/**
 	 * @author Praveen Kalliyath
 	 * 
 	 * @version 1.0
 	 * 
-	 * @since June 05 2020
+	 * @since June 30 2020
 	 */
 
-	/*
+	/**
 	 * Prepare Json Document using Jayway Json
 	 * 
 	 * @param jsonFile
@@ -38,7 +38,7 @@ public class JsonUtil {
 		return jsonDocument;
 	}
 
-	/*
+	/**
 	 * Method to retrieve value from json path
 	 * 
 	 * @param jsonFile
@@ -53,7 +53,7 @@ public class JsonUtil {
 		return parse(jsonFile).read(jsonPathExp);
 	}
 
-	/*
+	/**
 	 * Main method to test the utility
 	 */
 	public static void main(String args[]) {

@@ -48,6 +48,23 @@ public class EbayTest extends BaseUtil implements Data {
 	}
 
 	@Test(groups = { "Single" })
+	public void validateEbayMobileScrollTest() {
+		try {
+			Report.createChildNode(new Object() {
+			}.getClass().getEnclosingMethod().getName());
+
+			ebayHomeScreen.navigateBackToHomeScreenFromUsingSideNavigationScreen();
+			ebayHomeScreen.validateScrolling();
+
+		} catch (Exception e) {
+			Report.exception(e);
+			CommonUtil.softAssertFail("Failed to validate scrolling scrolling in Ebay Home Screen");
+		} finally {
+			Report.info("Completed validating the scrolling function in Ebay Home Screen");
+		}
+	}
+
+	@Test(groups = { "Single" })
 	public void validateSignInToEbayMobileAppTest() {
 		try {
 			Report.createChildNode(new Object() {
@@ -107,11 +124,9 @@ public class EbayTest extends BaseUtil implements Data {
 			}.getClass().getEnclosingMethod().getName());
 
 			ebaySearchScreen = new EbaySearchScreen(getDriver());
+			ebayHomeScreen.validateScrollUpAndScrollUpFunctionalityInDailyDealsScreen();
 			ebaySearchScreen.navigateToSearchScreenFromHomeScreen();
 			ebaySearchScreen.validateSwipeGestureFunctionalityInQuickSearch();
-
-			ebayHomeScreen.validateScrollUpAndScrollUpFunctionalityInDailyDealsScreen();
-
 		} catch (Exception e) {
 			Report.exception(e);
 			CommonUtil.softAssertFail("Failed to valdiate Swipe function in Search screen");
@@ -184,6 +199,7 @@ public class EbayTest extends BaseUtil implements Data {
 		try {
 			init();
 			validateEbayMobileAppHomeScreenTest();
+			validateEbayMobileScrollTest();
 			validateScreenOrientaionInHomeScreenTest();
 			validateSwipeAndScrollGestureFunctionalityInHomeScreenTest();
 			validateSignInToEbayMobileAppTest();

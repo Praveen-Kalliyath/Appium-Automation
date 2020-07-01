@@ -135,40 +135,15 @@
 			</plugin>
 
 			<!--Maven Clean -->
-			<!-- <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>${maven.clean.version}</version>
-				<executions>
-					<execution>
-						<id>Deleting all files under target folder but not target itself</id>
-						<phase>clean</phase>
-						<goals>
-							<goal>clean</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<excludeDefaultDirectories>true</excludeDefaultDirectories>
-					<filesets>
-						<fileset>
-							<directory>target</directory>
-							<followSymlinks>false</followSymlinks>
-							<includes>
-								<include>**/*</include>
-							</includes>
-						</fileset>
-						<fileset>
-							<directory>target-output</directory>
-							<followSymlinks>false</followSymlinks>
-							<includes>
-								<include>**/*</include>
-							</includes>
-						</fileset>
-					</filesets>
-				</configuration>
-			</plugin>
- -->
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-clean-plugin</artifactId> 
+				<version>${maven.clean.version}</version> <executions> <execution> <id>Deleting 
+				all files under target folder but not target itself</id> <phase>clean</phase> 
+				<goals> <goal>clean</goal> </goals> </execution> </executions> <configuration> 
+				<excludeDefaultDirectories>true</excludeDefaultDirectories> <filesets> <fileset> 
+				<directory>target</directory> <followSymlinks>false</followSymlinks> <includes> 
+				<include>**/*</include> </includes> </fileset> <fileset> <directory>target-output</directory> 
+				<followSymlinks>false</followSymlinks> <includes> <include>**/*</include> 
+				</includes> </fileset> </filesets> </configuration> </plugin> -->
 
 		</plugins>
 	</build>

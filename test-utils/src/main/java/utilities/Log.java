@@ -3,16 +3,16 @@ package utilities;
 import org.apache.log4j.Logger;
 
 public class Log {
-	/*
+	/**
 	 * @author Praveen Kalliyath
 	 * 
 	 * @version 1.0
 	 * 
-	 * @since June 05 2020
+	 * @since June 30 2020
 	 */
 	private static Logger logger = Logger.getLogger(Log.class);
 
-	/*
+	/**
 	 * Method to Log Information
 	 * 
 	 * @param message
@@ -21,7 +21,7 @@ public class Log {
 		logger.info(message);
 	}
 
-	/*
+	/**
 	 * Method to Log Warning
 	 * 
 	 * @param message
@@ -30,7 +30,7 @@ public class Log {
 		logger.warn(message);
 	}
 
-	/*
+	/**
 	 * Method to Log Error
 	 * 
 	 * @param message
@@ -39,7 +39,7 @@ public class Log {
 		logger.error(message);
 	}
 
-	/*
+	/**
 	 * Method to Log Fatal
 	 * 
 	 * @param message
@@ -48,7 +48,7 @@ public class Log {
 		logger.fatal(message);
 	}
 
-	/*
+	/**
 	 * Method to Log Debug
 	 * 
 	 * @param message

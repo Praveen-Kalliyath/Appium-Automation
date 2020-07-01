@@ -4,12 +4,12 @@ import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
 public class RetryAnalyzer implements IRetryAnalyzer {
-	/*
+	/**
 	 * @author Praveen Kalliyath
 	 * 
 	 * @version 1.0
 	 * 
-	 * @since June 05 2020
+	 * @since June 30 2020
 	 */
 
 	private int count = 0;
@@ -17,7 +17,7 @@ public class RetryAnalyzer implements IRetryAnalyzer {
 	// Set MAX_RETRY_COUNT > 0 to run failed tests again
 	private final int MAX_RETRY_COUNT = 0;
 
-	/*
+	/**
 	 * Method to re run failed test cases
 	 * 
 	 * @param result

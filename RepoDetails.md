@@ -1,7 +1,7 @@
 ##APPIUM AUTOMATION REPO
 
 ### Repo Creator:Praveen Kalliyath
-### Create Date: June 5th 2020
+### Create Date: June 30th 2020
 
 
 Tools user for development - Eclipse IDE

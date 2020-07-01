@@ -17,12 +17,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import libraries.Data;
 
 public class CommonUtil implements Data {
-	/*
+	/**
 	 * @author Praveen Kalliyath
 	 * 
 	 * @version 1.0
 	 * 
-	 * @since June 05 2020
+	 * @since June 30 2020
 	 */
 
 	private static DateFormat dateFormat;
@@ -30,7 +30,7 @@ public class CommonUtil implements Data {
 	private static SoftAssert softAssert;
 	private static String[] splitedString;
 
-	/*
+	/**
 	 * Method to use default wait
 	 * 
 	 * @param seconds
@@ -46,7 +46,7 @@ public class CommonUtil implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method to retrieve random alphabets
 	 * 
 	 * @param len
@@ -64,7 +64,7 @@ public class CommonUtil implements Data {
 		return new String(c);
 	}
 
-	/*
+	/**
 	 * Method to retrieve random mix of alphabets & numbers
 	 * 
 	 * @param len
@@ -82,7 +82,7 @@ public class CommonUtil implements Data {
 		return new String(c);
 	}
 
-	/*
+	/**
 	 * Method to retrieve random number
 	 * 
 	 * @param len
@@ -105,7 +105,7 @@ public class CommonUtil implements Data {
 		return new String(c);
 	}
 
-	/*
+	/**
 	 * Method to retrieve random number
 	 * 
 	 * @param min
@@ -124,7 +124,7 @@ public class CommonUtil implements Data {
 		return String.valueOf(random.nextInt((max - min) + 1) + min);
 	}
 
-	/*
+	/**
 	 * Method to validate regular expression
 	 * 
 	 * @param value
@@ -138,7 +138,7 @@ public class CommonUtil implements Data {
 		return pattern.matcher(value).matches();
 	}
 
-	/*
+	/**
 	 * Method to retrieve todays date
 	 * 
 	 * @return date
@@ -150,7 +150,7 @@ public class CommonUtil implements Data {
 		return dateFormat.format(date);
 	}
 
-	/*
+	/**
 	 * Method to retrieve date in desired pattern
 	 * 
 	 * @param pattern
@@ -164,7 +164,7 @@ public class CommonUtil implements Data {
 		return dateFormat.format(date);
 	}
 
-	/*
+	/**
 	 * Method to retrieve date in specific pattern
 	 * 
 	 * @param currentDate
@@ -188,7 +188,7 @@ public class CommonUtil implements Data {
 		return new SimpleDateFormat(requestPattern).format(requestedDate);
 	}
 
-	/*
+	/**
 	 * Assert Fail
 	 * 
 	 * @param message
@@ -199,7 +199,7 @@ public class CommonUtil implements Data {
 		Assert.fail(message);
 	}
 
-	/*
+	/**
 	 * Hard Assert True:
 	 * 
 	 * @param condition
@@ -209,7 +209,7 @@ public class CommonUtil implements Data {
 		Assert.assertTrue(condition);
 	}
 
-	/*
+	/**
 	 * Hard Assert True:
 	 * 
 	 * @param condition
@@ -219,7 +219,7 @@ public class CommonUtil implements Data {
 		Assert.assertFalse(condition);
 	}
 
-	/*
+	/**
 	 * Soft Assert : Check Equals
 	 * 
 	 * @param actual
@@ -232,7 +232,7 @@ public class CommonUtil implements Data {
 		softAssert.assertEquals(actual, expected);
 	}
 
-	/*
+	/**
 	 * Soft Assert : Check Not Equals
 	 * 
 	 * @param actual
@@ -245,7 +245,7 @@ public class CommonUtil implements Data {
 		softAssert.assertNotEquals(actual, expected);
 	}
 
-	/*
+	/**
 	 * Soft Assert : Fail
 	 * 
 	 * @param message
@@ -256,7 +256,7 @@ public class CommonUtil implements Data {
 		softAssert.fail(message);
 	}
 
-	/*
+	/**
 	 * Soft Assert True:
 	 * 
 	 * @param condition
@@ -267,7 +267,7 @@ public class CommonUtil implements Data {
 		softAssert.assertTrue(condition);
 	}
 
-	/*
+	/**
 	 * Soft Assert False:
 	 * 
 	 * @param condition
@@ -278,21 +278,21 @@ public class CommonUtil implements Data {
 		softAssert.assertFalse(condition);
 	}
 
-	/*
+	/**
 	 * Soft Assert : Assert All
 	 */
 	public static void assertAll() {
 		getSoftAssert().assertAll();
 	}
 
-	/*
+	/**
 	 * Getter method for softAssert object
 	 */
 	public static SoftAssert getSoftAssert() {
 		return softAssert;
 	}
 
-	/*
+	/**
 	 * Compare Actual Value With Actual Value
 	 * 
 	 * @param message
@@ -306,11 +306,12 @@ public class CommonUtil implements Data {
 				|| actual.toString().contains(expected.toString())) {
 			Report.pass(message + " - Actual value '" + actual + "' matched with Expected value '" + expected + "'");
 		} else {
-			Report.fail(message + " - Actual value '" + actual + "' not matched with Expected value '" + expected + "'");
+			Report.fail(
+					message + " - Actual value '" + actual + "' not matched with Expected value '" + expected + "'");
 		}
 	}
 
-	/*
+	/**
 	 * Convert HashMap to Json
 	 * 
 	 * @param hashMap
@@ -331,7 +332,7 @@ public class CommonUtil implements Data {
 		return json;
 	}
 
-	/*
+	/**
 	 * Convert Json to HashMap
 	 * 
 	 * @param jsonString
@@ -353,7 +354,7 @@ public class CommonUtil implements Data {
 		return jsonMap;
 	}
 
-	/*
+	/**
 	 * Compare Two HashMap
 	 * 
 	 * @param mapA
@@ -372,7 +373,7 @@ public class CommonUtil implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Get Random Index From List
 	 * 
 	 * @return index
@@ -384,7 +385,7 @@ public class CommonUtil implements Data {
 		return index;
 	}
 
-	/*
+	/**
 	 * Split String
 	 * 
 	 * @param text
@@ -403,7 +404,7 @@ public class CommonUtil implements Data {
 
 	}
 
-	/*
+	/**
 	 * Split String
 	 * 
 	 * @param locator
@@ -412,12 +413,13 @@ public class CommonUtil implements Data {
 	 * 
 	 */
 	public static String[] getLocator(String locator) {
-		splitedString = splitString(locator, ">>>");
+		// Report.info("LOCATOR: " + ProjectConfig.getProperty(locator));
+		splitedString = splitString(ProjectConfig.getProperty(locator), ">>>");
 		Log.info("Type: " + splitedString[0] + "  ::  Locator: " + splitedString[1]);
 		return splitedString;
 	}
 
-	/*
+	/**
 	 * MathRound Function
 	 * 
 	 * @param value
@@ -430,7 +432,7 @@ public class CommonUtil implements Data {
 		return String.valueOf(roundedNumber);
 	}
 
-	/*
+	/**
 	 * Method to return all digit from String
 	 * 
 	 * @param text
@@ -448,7 +450,7 @@ public class CommonUtil implements Data {
 		return number;
 	}
 
-	/*
+	/**
 	 * Method to return all letters from String
 	 * 
 	 * @param text
@@ -466,7 +468,7 @@ public class CommonUtil implements Data {
 		return value;
 	}
 
-	/*
+	/**
 	 * Method to return all letters & numbers removing special chars from String
 	 * 
 	 * @param text
@@ -484,15 +486,11 @@ public class CommonUtil implements Data {
 		return value;
 	}
 
-	/*
+	/**
 	 * Java main to test utility method
 	 */
 	public static void main(String args[]) {
-		// splitString("partialtext>>>Bulk Up Your: Pantry", ">>>");
-		// Log.info("Type: " + splitedString[0] + " - " + splitedString[1]);
-		//
-		System.out.println(roundNumber(getDigitsFromString("(approximately ?136,053.67)")));
-
+		System.out.println("STRINGS ARE: " + splitString("abc:::text", ":::")[0]);
 	}
 
 }

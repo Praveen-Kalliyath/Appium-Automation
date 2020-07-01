@@ -13,12 +13,12 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import libraries.Data;
 
 public class ExcelUtil implements Data {
-	/*
+	/**
 	 * @author Praveen Kalliyath
 	 * 
 	 * @version 1.0
 	 * 
-	 * @since June 05 2020
+	 * @since June 30 2020
 	 */
 
 	private Sheet excelWSheet;
@@ -30,7 +30,7 @@ public class ExcelUtil implements Data {
 	private HashMap<String, String> rowHashMap;
 	private DataFormatter dataFormatter;
 
-	/*
+	/**
 	 * Method to set/load excel from file path
 	 * 
 	 * @param sheetName
@@ -58,7 +58,7 @@ public class ExcelUtil implements Data {
 
 	}
 
-	/*
+	/**
 	 * Method to retrieve excel data in a hash map
 	 * 
 	 * @param rowNum
@@ -79,7 +79,7 @@ public class ExcelUtil implements Data {
 		Log.info("Excel Data Map: " + rowHashMap);
 	}
 
-	/*
+	/**
 	 * Method to retrieve excel data in a hash map
 	 * 
 	 * @param rowNum
@@ -100,7 +100,7 @@ public class ExcelUtil implements Data {
 		Log.info("Excel Data Map: " + rowHashMap);
 	}
 
-	/*
+	/**
 	 * Method to retrieve excel column index using row number and cell value
 	 * 
 	 * @param rowNum
@@ -119,7 +119,7 @@ public class ExcelUtil implements Data {
 		return colIndex;
 	}
 
-	/*
+	/**
 	 * Method to retrieve excel cell data using row and column number
 	 * 
 	 * @param rowNum
@@ -132,7 +132,7 @@ public class ExcelUtil implements Data {
 		return excelWSheet.getRow(rowNum).getCell(colNum).getStringCellValue();
 	}
 
-	/*
+	/**
 	 * Get Last Cell Number From Sheet
 	 * 
 	 * @return excelWSheet.getLastCellNum()
@@ -141,7 +141,7 @@ public class ExcelUtil implements Data {
 		return excelWSheet.getRow(rowNum).getLastCellNum();
 	}
 
-	/*
+	/**
 	 * Get Last Row Number From Sheet
 	 * 
 	 * @return excelWSheet.getLastRowNum()
@@ -150,7 +150,7 @@ public class ExcelUtil implements Data {
 		return excelWSheet.getLastRowNum();
 	}
 
-	/*
+	/**
 	 * Get User Row Count From Sheet
 	 * 
 	 * @return rowCount
@@ -166,7 +166,7 @@ public class ExcelUtil implements Data {
 		return rowCount;
 	}
 
-	/*
+	/**
 	 * Method to close excel workbook
 	 * 
 	 * @param key
@@ -178,7 +178,7 @@ public class ExcelUtil implements Data {
 		return rowHashMap.get(key);
 	}
 
-	/*
+	/**
 	 * Method to close excel workbook
 	 * 
 	 * @return hashMap
@@ -187,7 +187,7 @@ public class ExcelUtil implements Data {
 		return rowHashMap;
 	}
 
-	/*
+	/**
 	 * Method to set value to excel sheet
 	 * 
 	 * @param rowNum
@@ -234,7 +234,7 @@ public class ExcelUtil implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method to close excel workbook
 	 * 
 	 * @exception IOException
@@ -250,7 +250,7 @@ public class ExcelUtil implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method to set excel workbook location using application name
 	 * 
 	 * @param appName
@@ -268,7 +268,7 @@ public class ExcelUtil implements Data {
 		}
 	}
 
-	/*
+	/**
 	 * Method to retrieve excel workbook location
 	 * 
 	 * @return excelPath
@@ -278,7 +278,7 @@ public class ExcelUtil implements Data {
 		return excelPath;
 	}
 
-	/*
+	/**
 	 * Method to set excel workbook location
 	 * 
 	 * @param excelPath
@@ -294,7 +294,7 @@ public class ExcelUtil implements Data {
 		closeWorkbook();
 	}
 
-	/*
+	/**
 	 * Main method to test the utility
 	 */
 	public static void main(String args[]) {
