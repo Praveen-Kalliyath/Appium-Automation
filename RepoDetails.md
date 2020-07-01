@@ -12,7 +12,7 @@ Programming Language -Java
 
 Build Tool - MAVEN
 
-Version Control - Git
+Version Control - Git (https://github.com/Praveen-Kalliyath/appium-automation/)
 
 Log - Apache Log4j
 
