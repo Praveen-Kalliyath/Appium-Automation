@@ -23,20 +23,11 @@ public class EbaySignInScreen {
 
 	// TODO: Unable to do due to application restrictions
 	public void validateElementsInSignInScreen() {
-		// DriverUtil.implicitWait(3);
-		// DriverUtil.checkElementIsDisplayed(ebaySignInPage.inp_UserName);
-		// DriverUtil.checkElementIsDisplayed(ebaySignInPage.inp_Password);
-		// DriverUtil.checkElementIsDisplayed(ebaySignInPage.btn_SignIn);
 		Report.skip("Unable to validate sign-in page elements due to app restrictions");
 	}
 
 	// TODO: Unable to do due to application restrictions
 	public void loginToEbayMobileApp() {
-		// DriverUtil.setText(ebaySignInPage.inp_UserName,
-		// excelUtil.getValueForKey("User Name"));
-		// DriverUtil.setText(ebaySignInPage.inp_Password,
-		// StringEncrypt.decrpytString(excelUtil.getValueForKey("User Name")));
-		// clickOnSignInButton();
 		Report.skip("Unable to sign-in to ebay app due to app restrictions");
 	}
 

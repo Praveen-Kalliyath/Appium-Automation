@@ -90,22 +90,9 @@ public class EbayHomeScreen {
 
 		Report.info("Validating Scroll And Swipe Functions");
 		DriverUtil.driverStatus();
-
-		// DriverUtil.scrollDownUntilElementVisible(
-		// By.xpath("//android.widget.TextView[@content-desc='Bulk Up Your
-		// Pantry']"));
-		// DriverUtil.swipeDown(2);
-		// DriverUtil.checkElementIsDisplayed(DriverUtil.element("TRENDING_DEALS"));
-		// DriverUtil.swipeDown();
-		// DriverUtil.checkElementIsDisplayed(DriverUtil.element("MORE_FEATIURED_DEALS"));
-
 		DriverUtil.swipeRight(6);
-		// DriverUtil.swipeElementAndroid(DriverUtil.element("AUTOMOTIVE_SECTION"),
-		// "RIGHT");
 		DriverUtil.checkElementIsDisplayed(DriverUtil.element("AUTOMOTIVE_SECTION"));
 		DriverUtil.swipeLeft(6);
-		// DriverUtil.swipeElementAndroid(DriverUtil.element("FEATURED_DEALS"),
-		// "LEFT");
 		DriverUtil.checkElementIsDisplayed(DriverUtil.element("FEATURED_DEALS"));
 		DriverUtil.swipeToTop();
 		navigateBackToHomeScreenFromUsingSideNavigationScreen();
